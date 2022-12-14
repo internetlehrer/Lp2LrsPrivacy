@@ -1,11 +1,11 @@
 <?php
-/* Copyright (c) 1998-2015 ILIAS open source, Extended GPL, see LICENSE */
+/* Copyright (c) internetlehrer GmbH, Extended GPL, see LICENSE */
 
 use ILIAS\DI\Container;
 include_once './Services/UIComponent/classes/class.ilUIHookPluginGUI.php';
 
 /**
- * Class ilLp2LrsPrivacyUIHookGUI.
+ * Class ilLp2LrsPrivacyUIHookGUI
  *
  * @author      Uwe Kohnle <kohnle@internetlehrer-gmbh.de>
  */
@@ -37,7 +37,7 @@ class ilLp2LrsPrivacyUIHookGUI extends ilUIHookPluginGUI
      */
     public function getHTML($a_comp, $a_part, $a_par = array()): array
     {
-        if( ilPluginAdmin::isPluginActive("xlpc") ) {
+        if( ilPluginAdmin::isPluginActive("xlpc") || ilPluginAdmin::isPluginActive('xelrs') ) {
             if ($this->dic->ctrl()->getCmdClass() === strtolower(ilObjCourseGUI::class)
                 && $a_comp === self::COMPONENT_CONTAINER
                 && $a_part === self::PART_RIGHT_COLUMN
@@ -126,8 +126,12 @@ class ilLp2LrsPrivacyUIHookGUI extends ilUIHookPluginGUI
     }
 
     private function getPrivacyData() {
-        $settings = new ilSetting(ilLp2LrsCron::JOB_ID);
-        $lrsTypeId = $settings->get('lrs_type_id', 0);
+		if (ilPluginAdmin::isPluginActive('xelrs')) {
+			$lrsTypeId = $this->dic->settings()->get('xelrs__lrs_type_id', false);
+		} else {
+			$settings = new ilSetting(ilLp2LrsCron::JOB_ID);
+			$lrsTypeId = $settings->get('lrs_type_id', 0);
+		}
         $lrsType = new ilCmiXapiLrsType($lrsTypeId);
 
         $endpoint = $lrsType->getLrsEndpoint();

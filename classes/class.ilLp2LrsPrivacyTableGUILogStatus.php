@@ -1,13 +1,10 @@
 <?php
-/**
- * Copyright (c) 2018 internetlehrer-gmbh.de
- * GPLv2, see LICENSE 
- */
+/* Copyright (c) internetlehrer GmbH, Extended GPL, see LICENSE */
 
 use ILIAS\DI\Container;
 
 /**
- * xapidel plugin: content types table GUI
+ * class ilLp2LrsPrivacyTableGUILogStatus
  *
  * @author Uwe Kohnle <kohnle@internetlehrer-gmbh.de>
  * @version $Id$

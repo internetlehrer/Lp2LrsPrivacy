@@ -1,10 +1,10 @@
 <?php
-/* Copyright (c) 1998-2015 ILIAS open source, Extended GPL, see LICENSE */
+/* Copyright (c) internetlehrer GmbH, Extended GPL, see LICENSE */
 
 include_once './Services/UIComponent/classes/class.ilUserInterfaceHookPlugin.php';
  
 /**
- * class ilLp2LrsPrivacyPlugin.
+ * class ilLp2LrsPrivacyPlugin
  *
  * @author      Uwe Kohnle <kohnle@internetlehrer-gmbh.de>
  */

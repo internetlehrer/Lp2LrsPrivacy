@@ -1,9 +1,9 @@
 header_allow_lp2lrs#:#Lernverlaufsspeicherung
-info_allow_lp2lrs#:#Zur Evaluation können Lernfortschrittsänderungen in einem Learning Record Store gespeichert werden.
+info_allow_lp2lrs#:#Bei aktivierter Lernverlaufsspeicherung können Lernverlaufsdaten in einem Learning Record Store gespeichert werden.
 btn_confirm_allow_lp2lrs#:#Speichern
 changes_saved#:#Änderungen gespeichert
 content_types#:#Zustimmungs-Log
-not_active_xlpc#:#Lp2Lrs-Plugin ist deaktiviert. Bitte zuerst aktivieren.
+not_active_xlpc#:#Lp2Lrs-Plugin oder Events2Lrs-Plugin muss aktiviert sein. Bitte zuerst eines dieser Plugins aktivieren.
 txt_current_state#:#Aktueller Status:
 enabled#:#aktiviert
 disabled#:#deaktiviert

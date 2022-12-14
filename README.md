@@ -1,7 +1,7 @@
 # Lp2LrsPrivacy ILIAS Plugin
 
 Purpose: Course members can allow or disallow storing learning progress data to a Learning Record Store via a sidebar panel available in courses.
-This plugin complements the Lp2Lrs plugin and restricts the storage of data to objects within courses. Course members decide for themselves whether they agree to the storage of data in LRS. 
+This plugin complements the Lp2Lrs- or Events2Lrs-plugin and restricts the storage of data to objects within courses. Course members decide for themselves whether they agree to the storage of data in LRS. 
 
 This is an OpenSource project by internetlehrer GmbH, Bruchsal.
 
@@ -9,9 +9,9 @@ This project is licensed under the GPL-3.0-only license.
 
 ## Requirements
 
-* ILIAS 5.4.0 - 6.999
-* PHP >=7.2
-* Installed and activated Lp2Lrs-Plugin
+* ILIAS 6.0 - 7.999
+* PHP >=7.3
+* Installed and activated Lp2Lrs-Plugin or Events2Lrs-Plugin
 
 ## Installation
 
@@ -23,7 +23,7 @@ cd Customizing/global/plugins/Services/UIComponent/UserInterfaceHook
 git clone https://github.com/internetlehrer/Lp2LrsPrivacy.git Lp2LrsPrivacy
 ```
 
-Make sure you have installed the Lp2Lrs-Plugin. Then install/update and activate the Lp2LrsPrivacy-Plugin in the ILIAS Plugin Administration. 
+Make sure you have installed the Lp2Lrs- or the Events2Lrs-Plugin. Then install/update and activate the Lp2LrsPrivacy-Plugin in the ILIAS Plugin Administration. 
 
 ## Usage
 

@@ -1,14 +1,11 @@
 <?php
-
-/* Copyright (c) 1998-2019 ILIAS open source, Extended GPL, see docs/LICENSE */
+/* Copyright (c) internetlehrer GmbH, Extended GPL, see LICENSE */
 
 
 /**
- * Class ilLp2LrsConfig
+ * Class ilLp2LrsPrivacyConfigGUI
  *
- * @author      Björn Heyser <info@bjoernheyser.de>
- *
- * @package     Services/AssessmentQuestion
+ * @author      Uwe Kohnle <kohnle@internetlehrer-gmbh.de>
  */
 
 use ILIAS\DI\Container;
@@ -59,7 +56,7 @@ class ilLp2LrsPrivacyConfigGUI extends ilPluginConfigGUI
      */
     protected function configure($resetFilter = false, ilPropertyFormGUI $form = null)
     {
-        if( !ilPluginAdmin::isPluginActive('xlpc') ) {
+        if( !ilPluginAdmin::isPluginActive('xlpc') && !ilPluginAdmin::isPluginActive('xelrs') ) {
             ilUtil::sendFailure($this->plugin_object->txt('not_active_xlpc'));
             return;
         }

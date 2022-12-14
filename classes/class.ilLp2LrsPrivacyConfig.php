@@ -1,5 +1,5 @@
 <?php
-/* Copyright (c) 1998-2015 ILIAS open source, Extended GPL, see LICENSE */
+/* Copyright (c) internetlehrer GmbH, Extended GPL, see LICENSE */
 
 /**
  * Class ilLp2LrsPrivacyConfig

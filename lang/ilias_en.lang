@@ -1,9 +1,9 @@
 header_allow_lp2lrs#:#Learning process storage
-info_allow_lp2lrs#:#For evaluation purposes, learning progress changes can be stored in a Learning Record Store.
+info_allow_lp2lrs#:#When learning process storage is enabled, learning process data can be stored in a learning record store.
 btn_confirm_allow_lp2lrs#:#Save
 changes_saved#:#changes saved
 content_types#:#Approval Log
-not_active_xlpc#:#Lp2Lrs-Plugin is disabled. Please enable it first.
+not_active_xlpc#:#Lp2Lrs-Plugin or Events2Lrs-Plugin must be enabled. Please enable one if these Plugins first.
 txt_current_state#:#Current state:
 enabled#:#enabled
 disabled#:#disabled
