@@ -1,6 +1,8 @@
 <?php
 /* Copyright (c) internetlehrer GmbH, Extended GPL, see LICENSE */
 
+use ILIAS\DI\Container;
+
 include_once './Services/UIComponent/classes/class.ilUserInterfaceHookPlugin.php';
  
 /**
@@ -48,11 +50,11 @@ class ilLp2LrsPrivacyPlugin extends ilUserInterfaceHookPlugin
         return $this->config;
     }
 
-    protected function afterUninstall()
+    protected function afterUninstall(): void
     {
-        global $DIC;
+        global $DIC; /** @var Container $DIC */
         $ilDB = $DIC->database();
-        $ilDB->manipulate('DELETE FROM settings WHERE module = ' . $ilDB->quote('uihk_xlpp', 'string'));
-        $ilDB->dropTable($ilDB->quote('uihk_xlpp_log', 'string'));
+        $ilDB->manipulate('DELETE FROM settings WHERE module = ' . $ilDB->quote('uihk_xlpp', 'text'));
+        $ilDB->dropTable('uihk_xlpp_log');
     }
 }
